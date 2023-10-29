@@ -1,3 +1,63 @@
-body{
-  background: red;
+.page-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  //************************* Header
+
+  .header {
+    display: grid;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    min-height: 10rem;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .choice {
+      min-width: 12rem;
+      max-width: 12rem;
+      height: 3.2rem;
+      margin: 1rem 0;
+      user-select: none;
+
+      .radio-group {
+        display: flex;
+        gap: 2px;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 3.2rem;
+        border-radius: 10px;
+        background-color: $background-choice;
+        color: $font-color-desc;
+
+        input[type="radio"] {
+          display: none;
+        }
+        input[type="radio"]:checked + label {
+          border: solid 2px;
+          border-radius: 10px;
+          border-color: rgb(0, 0, 0);
+          background-color: $main-color;
+          color: $font-color-white;
+        }
+
+        label {
+          cursor: pointer;
+          font-weight: 600;
+          width: 46%;
+          height: 85%;
+          display: grid;
+         align-content: center;
+        }
+      }
+    }
+  }
 }
