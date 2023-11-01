@@ -43,9 +43,9 @@
           display: none;
         }
         input[type="radio"]:checked + label {
-          border: solid 2px;
-          border-radius: 10px;
-          border-color: rgb(0, 0, 0);
+          border-radius: 5px;
+          border: none;
+          box-shadow: 0 0px 1px 2px rgba(0, 0, 0, 0.356);
           background-color: $main-color;
           color: $font-color-white;
         }
@@ -70,22 +70,31 @@
     margin: 3rem 0;
 
     .plan-tile {
-      border: 1px solid red;
-
+      min-width: 17rem;
+      max-width: 20rem;
       margin: 0 1rem;
+      box-shadow: 0 4px 11px 2px rgba(0, 0, 0, 0.062);
+      border-radius: 10px;
 
       .plan {
         min-height: 100%;
+        background: $background-choice;
+        border-radius: 10px;
 
         .pricing-part {
-          height: 20%;
+          min-height: 20%;
           margin-bottom: 1rem;
+          background: white;
+          padding-bottom: 0.8rem;
+          border-radius: 10px 10px 0 0;
 
           .plan-name {
             font-size: 2rem;
           }
           .description {
-            // background: grey;
+            max-width: 25ch;
+            margin: 0 auto;
+            min-height: 3rem;
           }
           .price {
             display: flex;
@@ -104,32 +113,40 @@
               }
             }
             p:not(#price) {
-              font-size: 1.2rem;
+              font-size: 0.7rem;
               margin-left: 0.5rem;
             }
           }
 
           .button {
+            cursor: pointer;
             width: 85%;
+            user-select: none;
+            color: $font-color-white;
+            background: $main-color;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0px 8px 1px rgb(0 0 0 / 53%);
+            transition: 0.3s;
+
+            &:hover {
+              transform: scale(105%);
+            }
           }
         }
 
         .plan-content {
-          background: $background-choice;
-
           ul {
             display: flex;
             flex-direction: column;
             align-items: start;
-            
-    
 
-            li{
+            li {
               text-align: left;
               // font-weight: 600;
               margin: 0.1rem;
-              &::marker{
-                color: blue;
+              &::marker {
+                color: $main-color;
               }
             }
           }

@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Raleway", Verdana;
 }
 
 * {
@@ -100,9 +102,9 @@ h6 {
   display: none;
 }
 .page-container .header .choice .radio-group input[type=radio]:checked + label {
-  border: solid 2px;
-  border-radius: 10px;
-  border-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0px 1px 2px rgba(0, 0, 0, 0.356);
   background-color: rgb(114, 0, 245);
   color: rgb(238, 238, 238);
 }
@@ -120,18 +122,31 @@ h6 {
   margin: 3rem 0;
 }
 .page-container .plans-container .plan-tile {
-  border: 1px solid red;
+  min-width: 17rem;
+  max-width: 20rem;
   margin: 0 1rem;
+  box-shadow: 0 4px 11px 2px rgba(0, 0, 0, 0.062);
+  border-radius: 10px;
 }
 .page-container .plans-container .plan-tile .plan {
   min-height: 100%;
+  background: rgba(219, 219, 219, 0.479);
+  border-radius: 10px;
 }
 .page-container .plans-container .plan-tile .plan .pricing-part {
-  height: 20%;
+  min-height: 20%;
   margin-bottom: 1rem;
+  background: white;
+  padding-bottom: 0.8rem;
+  border-radius: 10px 10px 0 0;
 }
 .page-container .plans-container .plan-tile .plan .pricing-part .plan-name {
   font-size: 2rem;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .description {
+  max-width: 25ch;
+  margin: 0 auto;
+  min-height: 3rem;
 }
 .page-container .plans-container .plan-tile .plan .pricing-part .price {
   display: flex;
@@ -150,14 +165,24 @@ h6 {
   left: -16px;
 }
 .page-container .plans-container .plan-tile .plan .pricing-part .price p:not(#price) {
-  font-size: 1.2rem;
+  font-size: 0.7rem;
   margin-left: 0.5rem;
 }
 .page-container .plans-container .plan-tile .plan .pricing-part .button {
+  cursor: pointer;
   width: 85%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgb(238, 238, 238);
+  background: rgb(114, 0, 245);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.53);
+  transition: 0.3s;
 }
-.page-container .plans-container .plan-tile .plan .plan-content {
-  background: rgba(219, 219, 219, 0.479);
+.page-container .plans-container .plan-tile .plan .pricing-part .button:hover {
+  transform: scale(105%);
 }
 .page-container .plans-container .plan-tile .plan .plan-content ul {
   display: flex;
@@ -169,5 +194,5 @@ h6 {
   margin: 0.1rem;
 }
 .page-container .plans-container .plan-tile .plan .plan-content ul li::marker {
-  color: blue;
+  color: rgb(114, 0, 245);
 }/*# sourceMappingURL=index.css.map */

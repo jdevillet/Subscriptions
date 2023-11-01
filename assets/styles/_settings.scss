@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
 $font-color-black: rgb(22, 22, 22);
 $font-color-white: rgb(238, 238, 238);
 $font-color-desc: rgba(32, 32, 32, 0.596);
@@ -8,6 +13,8 @@ $main-color:rgb(114, 0, 245);
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Raleway', Verdana;
+
 }
 * {
   margin: 0;
@@ -15,6 +22,7 @@ $main-color:rgb(114, 0, 245);
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  
 }
 img,
 picture,
