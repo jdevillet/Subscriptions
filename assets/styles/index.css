@@ -53,10 +53,15 @@ h6 {
   color: rgba(32, 32, 32, 0.596);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .page-container {
   display: grid;
   justify-content: center;
   align-content: center;
+  margin: 0 2rem;
 }
 .page-container .header {
   display: grid;
@@ -108,4 +113,61 @@ h6 {
   height: 85%;
   display: grid;
   align-content: center;
+}
+.page-container .plans-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem 0;
+}
+.page-container .plans-container .plan-tile {
+  border: 1px solid red;
+  margin: 0 1rem;
+}
+.page-container .plans-container .plan-tile .plan {
+  min-height: 100%;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part {
+  height: 20%;
+  margin-bottom: 1rem;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .plan-name {
+  font-size: 2rem;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .price #price {
+  font-size: 3rem;
+  position: relative;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .price #price::before {
+  content: "$";
+  position: absolute;
+  font-size: 1.7rem;
+  top: 10px;
+  left: -16px;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .price p:not(#price) {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+.page-container .plans-container .plan-tile .plan .pricing-part .button {
+  width: 85%;
+}
+.page-container .plans-container .plan-tile .plan .plan-content {
+  background: rgba(219, 219, 219, 0.479);
+}
+.page-container .plans-container .plan-tile .plan .plan-content ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.page-container .plans-container .plan-tile .plan .plan-content ul li {
+  text-align: left;
+  margin: 0.1rem;
+}
+.page-container .plans-container .plan-tile .plan .plan-content ul li::marker {
+  color: blue;
 }/*# sourceMappingURL=index.css.map */
